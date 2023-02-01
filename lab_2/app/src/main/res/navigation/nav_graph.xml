@@ -20,9 +20,17 @@
         android:name="com.example.lab_2.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
-
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_SecondFragment_to_customFragment"
+            app:destination="@id/customFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customFragment"
+        android:name="com.example.lab_2.CustomFragment"
+        android:label="fragment_custom"
+        tools:layout="@layout/fragment_custom" >
+        <action
+            android:id="@+id/action_customFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

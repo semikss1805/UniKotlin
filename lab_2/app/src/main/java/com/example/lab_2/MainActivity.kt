@@ -1,5 +1,6 @@
 package com.example.lab_2
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
+            val intent = Intent(this, TabbedActivity::class.java)
+            startActivity(intent)
         }
     }
 
